@@ -1,6 +1,3 @@
-'''
-Building configuration...
-
 Current configuration : 806 bytes
 !
 version 12.4
@@ -87,5 +84,5 @@ line vty 0 4
 !
 !
 end
-'''
+
 

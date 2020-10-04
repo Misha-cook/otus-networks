@@ -65,5 +65,4 @@ interface FastEthernet0/0.4
  ip address 192.168.4.1 255.255.255.0
 !
 interface FastEthernet0/0.8
- no ip address
- '''
+ no ip address'''

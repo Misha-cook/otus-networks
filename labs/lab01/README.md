@@ -68,4 +68,4 @@ interface FastEthernet0/0.8
  no ip address
 ```
 
-#### -[Конфигурация сетевого оборудования](otus-networks/labs/lab01/config/)
+#### -[Конфигурация сетевого оборудования](otus-networks/labs/lab01/config/).

@@ -44,3 +44,26 @@
 
 ![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%20Packet%20Tracer.png)
 
+## Выполнение задания:
+
+#### Пример конфигурации для R1
+
+```
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.3
+ description vlan 3
+ encapsulation dot1Q 3
+ ip address 192.168.3.1 255.255.255.0
+!
+interface FastEthernet0/0.4
+ description vlan 4
+ encapsulation dot1Q 4
+ ip address 192.168.4.1 255.255.255.0
+!
+interface FastEthernet0/0.8
+ no ip address
+ '''

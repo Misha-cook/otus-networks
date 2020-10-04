@@ -48,8 +48,7 @@
 
 #### Пример конфигурации для R1
 
-```
-interface FastEthernet0/0
+```interface FastEthernet0/0
  no ip address
  duplex auto
  speed auto
@@ -65,4 +64,10 @@ interface FastEthernet0/0.4
  ip address 192.168.4.1 255.255.255.0
 !
 interface FastEthernet0/0.8
- no ip address'''
+ no ip address
+```
+
+#### Конфигурация для R1
+#### Конфигурация для S1
+#### Конфигурация для S2
+

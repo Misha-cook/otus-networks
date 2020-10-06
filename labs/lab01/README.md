@@ -48,12 +48,13 @@
 
 #### Часть 1.Создание сети и настройка основных параметров устройства.
 
-Основные настройки произведенные на R1  (Ккоманды выполнены в конфигурационном режиме)
+Основные настройки произведенные на R1 
 
 ```
-hostname R1
+(Команды выполнены в конфигурационном режиме)
+hostname R1 // Переименуем маршрутизатор
 !
-no ip domain-lookup
+no ip domain-lookup // Отключите поиск DNS
 !
 enable secret ****** //поставим пароль на вход в режим enable
 !
@@ -62,8 +63,31 @@ aaa new-model //подключение модели AAA
 aaa authentication login default local // аутентификация происходит локально (с встроенной памяти)
 !
 username cisco privilege 15 secret cisco // устанавливаем логин и пароль для удаленного входа на маршрутизатор
+!
+banner motd #Unauthorized access to this device is prohibited! // установка баннера
 
+Выходим из конфигурационного режима
+
+clock set 13:12:00 23 october 2018 // установка времени
+!
+copy running-config startup-config //сохранение конфигурации
 ```
+Аналогичные команды заливаются на коммутаторы S1 и S2
+
+#### Часть 2: Создание сетей VLAN и назначение портов коммутатора
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+3    Management                       active    Fa0/6
+4    Operations                       active    
+7    ParkingLot                       active    Fa0/2, Fa0/3, Fa0/4, Fa0/7
+                                                Fa0/8, Fa0/9, Fa0/10, Fa0/11
+                                                Fa0/12, Fa0/13, Fa0/14, Fa0/15
+                                                Fa0/16, Fa0/17, Fa0/18, Fa0/19
+                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                Fa0/24, Gig0/1, Gig0/2
+1002 fddi-default                     active    
 
 #### Пример конфигурации для R1
 

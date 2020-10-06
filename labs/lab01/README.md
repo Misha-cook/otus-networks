@@ -132,10 +132,12 @@ interface FastEthernet0/0.8
  no ip address
 ```
 #### Часть 5: Убедиться, что маршрутизация между VLAN работает
--ping с PC0 на шлюз 
-![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/1.png)
--ping с PC0 на PC1
-![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/2.png)
--ping с PC0 на S1
-![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/3.png)
+##ping с PC0 на шлюз: 
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/1.png).
+
+##ping с PC0 на PC1:
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/2.png).
+
+##ping с PC0 на S1:
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/3.png).
 #### -[Конфигурация сетевого оборудования](config/).

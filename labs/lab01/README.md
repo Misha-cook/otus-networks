@@ -77,7 +77,7 @@ copy running-config startup-config //сохранение конфигураци
 #### Часть 2: Создание сетей VLAN и назначение портов коммутатора
 
 VLAN Name                             Status    Ports
----- -------------------------------- --------- -------------------------------
+| :-------|:-----------------| -----------:| -----------:| 
 1    default                          active    
 3    Management                       active    Fa0/6
 4    Operations                       active    
@@ -87,7 +87,7 @@ VLAN Name                             Status    Ports
                                                 Fa0/16, Fa0/17, Fa0/18, Fa0/19
                                                 Fa0/20, Fa0/21, Fa0/22, Fa0/23
                                                 Fa0/24, Gig0/1, Gig0/2
-1002 fddi-default                     active    
+
 
 #### Пример конфигурации для R1
 

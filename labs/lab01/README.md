@@ -46,21 +46,21 @@
 
 ## Выполнение задания:
 
-#### Часть 1.Создание сети и настройка основных параметров устройства.
+#### Часть 1: Создание сети и настройка основных параметров устройства.
 
 Основные настройки произведенные на R1 
 
 ```
 (Команды выполнены в конфигурационном режиме)
-hostname R1 // переименуем маршрутизатор
+hostname R1                              // переименуем маршрутизатор
 !
-no ip domain-lookup // отключите поиск DNS
+no ip domain-lookup                      // отключите поиск DNS
 !
-enable secret ****** //поставим пароль на вход в режим enable
+enable secret ******                     //поставим пароль на вход в режим enable
 !
 aaa new-model //подключение модели AAA
 !
-aaa authentication login default local // аутентификация происходит локально (с встроенной памяти)
+aaa authentication login default local   // аутентификация происходит локально (с встроенной памяти)
 !
 username cisco privilege 15 secret cisco // устанавливаем логин и пароль для удаленного входа на маршрутизатор
 !
@@ -68,9 +68,9 @@ banner motd #Unauthorized access to this device is prohibited! // установ
 
 Выходим из конфигурационного режима
 
-clock set 13:12:00 23 october 2018 // установка времени
+clock set 13:12:00 23 october 2018      // установка времени
 !
-copy running-config startup-config //сохранение конфигурации
+copy running-config startup-config      //сохранение конфигурации
 ```
 Аналогичные команды заливаются на коммутаторы S1 и S2
 
@@ -78,9 +78,9 @@ copy running-config startup-config //сохранение конфигураци
 - Создание VLAN 
 ```
 (Команды выполнены в конфигурационном режиме)
-vlan n // создание vlan n
+vlan n                                  // создание vlan n
 !
-name Operation // устанавливаем название для vlan 
+name Operation                          // устанавливаем название для vlan 
 аналогично для остальных 
 ```
 - Конфигурация управляющего интерфейса и шлюза по умолчанию
@@ -90,8 +90,8 @@ interface Vlan3
  description Management
  ip address 192.168.3.11 255.255.255.0
 !
-ip default-gateway 192.168.3.1 // шлюз по умолчанию
-```
+ip default-gateway 192.168.3.1           // шлюз по умолчанию
+``` 
 - Назначения VLAN 
 
 |VLAN| Name |Status    |Ports|
@@ -101,17 +101,24 @@ ip default-gateway 192.168.3.1 // шлюз по умолчанию
 |4|    Operations |                      active|        |
 |7|    ParkingLot |                      active|    Fa0/2-4, Fa0/7-24, Gig0/1-2|
                                               
-
-
-#### Пример конфигурации для R1
-
+#### Часть 3: Настройка магистрали 802.1Q между коммутаторами
+Рассмотрим настройку транка в сторону соседнего коммутатора
+```
+interface FastEthernet0/1                // интерфейс в сторону соседнего коммутатора
+ description Link_R2                     // наименование интерфейса
+ switchport trunk native vlan 8          // назначение Vlan 8 не тегированным 
+ switchport trunk allowed vlan 3-4,8     // добавление vlan в trunk
+ switchport mode trunk                   // обозначение интерфейса в виде trunk
+```
+#### Часть 4: Настройка маршрутизации между VLAN на маршрутизаторе
+Рассмотрим настройку интерфейса interface FastEthernet0/0 в сторону коммутатора
 ```
 interface FastEthernet0/0
  no ip address
  duplex auto
  speed auto
 !
-interface FastEthernet0/0.3
+interface FastEthernet0/0.3               
  description vlan 3
  encapsulation dot1Q 3
  ip address 192.168.3.1 255.255.255.0
@@ -124,5 +131,6 @@ interface FastEthernet0/0.4
 interface FastEthernet0/0.8
  no ip address
 ```
-
+#### Часть 5: Убедиться, что маршрутизация между VLAN работает
+-ping с ПК-А на шлюз по умолчанию
 #### -[Конфигурация сетевого оборудования](config/).

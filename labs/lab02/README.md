@@ -20,3 +20,13 @@
 ## Топология:
 
 #### Cхема лабораторного стенда, выполненная в draw.io:
+
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_1.png)
+
+#### Cхема лабораторного стенда, выполненная в Packet Tracer:
+
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_2.png)
+
+## Выполнение задания:
+
+#### Часть 1: Создание сети и настройка основных параметров устройства.

@@ -82,3 +82,5 @@ ping с S2 на S3
 
 ![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_5.png).
 
+#### Часть 2: Выбор корневого моста
+

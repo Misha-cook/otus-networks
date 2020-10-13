@@ -72,7 +72,7 @@ copy running-config startup-config      //сохранение конфигур�
 
 ping с S1 на S2
 
-![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_4.png).
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_3.png).
 
 ping с S1 на S3
 

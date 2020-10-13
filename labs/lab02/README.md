@@ -39,7 +39,7 @@
 #### Часть 1: Создание сети и настройка основных параметров устройства.
 
 
-Основные настройки произведенные на R1 
+##### Основные настройки произведенные на R1 
 
 ```
 (Команды выполнены в конфигурационном режиме)
@@ -64,3 +64,17 @@ clock set 13:12:00 23 october 2018      // установка времени
 copy running-config startup-config      //сохранение конфигурации
 
 ```
+##### Проверка связности
+
+ping с S1 на S2
+
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/1.png).
+
+ping с S1 на S3
+
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/1.png).
+
+ping с S2 на S3
+
+![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab01/1.png).
+

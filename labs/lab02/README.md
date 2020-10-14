@@ -1,5 +1,5 @@
 # Настройка STP-
-[click on this link](#my-multi-word-heade)    
+[click on this link](#my-multi-word-header) 
 ## Исходные данные:
 
 #### Addressing Table

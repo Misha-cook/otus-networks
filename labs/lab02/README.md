@@ -1,5 +1,5 @@
 # Настройка STP-
-[click on this link](#проверка_связности) 
+[click on this link](#проверка-связности) 
 ## Исходные данные:
 
 #### Addressing Table

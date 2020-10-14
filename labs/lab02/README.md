@@ -1,5 +1,5 @@
-# Настройка STP
-[click on this link](#my-multi-word-header)    
+# Настройка STP-
+[click on this link](#Cхемалабораторногостенда,выполненнаявdraw.io)    
 ## Исходные данные:
 
 #### Addressing Table

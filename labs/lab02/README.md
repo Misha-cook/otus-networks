@@ -161,9 +161,10 @@ Alternate port — альтернативный путь к корневому �
 
 ![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_14.png)
 
-Состояние STP на S3
+Состояние STP на S3 после изменения стоимости порта
 
 ![Image alt](https://github.com/Misha-cook/otus-networks/blob/main/labs/lab02/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA_15.png)
+
 
 
 ### [в начало](#настройка-stp)
